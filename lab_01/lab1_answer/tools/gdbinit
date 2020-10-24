@@ -1,0 +1,7 @@
+set architecture i8086
+file bin/kernel
+target remote :1234
+b pmm_init
+c
+set architecture i386
+
