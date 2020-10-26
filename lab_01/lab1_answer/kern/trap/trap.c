@@ -54,7 +54,7 @@ for (pos = 0; pos < 256; pos++)
         SETGATE(idt[pos], 0, GD_KTEXT, __vectors[pos], 0);
     }
     
-    SETGATE(idt[T_SYSCALL], 1, sel, __vectors[T_SYSCALL], 3);
+    SETGATE(idt[T_SYSCALL], 0, GD_KTEXT, __vectors[T_SYSCALL], 3);
     lidt(&idt_pd);
 }
 
